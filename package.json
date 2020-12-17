@@ -1,0 +1,44 @@
+{
+    "name": "@moonwalkingbits/apollo-validation",
+    "version": "0.1.0",
+    "description": "Easy and extensive validation engine.",
+    "author": "Martin Pettersson <martin@moonwalkingbits.com>",
+    "license": "MIT",
+    "keywords": [
+        "apollo",
+        "validate",
+        "validation"
+    ],
+    "homepage": "https://github.com/moonwalkingbits/apollo-validation#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/moonwalkingbits/apollo-validation.git"
+    },
+    "bugs": {
+        "url": "https://github.com/moonwalkingbits/apollo-validation/issues"
+    },
+    "type": "module",
+    "exports": {
+        ".": "./index.js"
+    },
+    "types": "index.d.ts",
+    "files": [
+        "index.js",
+        "index.d.ts",
+        "lib/"
+    ],
+    "scripts": {
+        "test": "mocha",
+        "test:typescript": "tsd",
+        "test:cover": "c8 npm test"
+    },
+    "engines": {
+        "node": ">=14.5"
+    },
+    "devDependencies": {
+        "c8": "~7.3",
+        "chai": "~4.2",
+        "mocha": "~8.2",
+        "tsd": "~0.13"
+    }
+}
