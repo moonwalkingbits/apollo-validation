@@ -116,9 +116,35 @@ declare class ValidatorFactory {
     public createValidator(validationIdentifiers?: Array<string>, validationStrategy?: ValidationStrategy): Validator;
 }
 
+/**
+ * Error thrown when validation fails.
+ */
+declare class ValidationError extends Error {}
+
+/**
+ * Error thrown by the validator if any validations fail.
+ */
+declare class ValidatorError extends Error {
+    /**
+     * Key/value object containing the failed properties and the validation errors.
+     */
+    public errors: {[key: string]: Array<string>};
+
+    /**
+     * Create a new error instance.
+     *
+     * @param message Informative error message.
+     * @param property Invalid object property.
+     * @param previous Previous error.
+     */
+    public constructor(message: string, property: string, previous?: ValidatorError);
+}
+
 export {
+    ValidationError,
     ValidationInterface,
     ValidationStrategy,
     Validator,
+    ValidatorError,
     ValidatorFactory
 };

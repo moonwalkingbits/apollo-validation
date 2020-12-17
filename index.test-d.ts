@@ -7,7 +7,14 @@
 
 import { expectAssignable, expectType } from "tsd";
 
-import { ValidationInterface, ValidationStrategy, Validator, ValidatorFactory } from ".";
+import {
+    ValidationError,
+    ValidationInterface,
+    ValidationStrategy,
+    Validator,
+    ValidatorError,
+    ValidatorFactory
+} from ".";
 
 class Validation implements ValidationInterface {
     public getIdentifier(): string {
@@ -32,3 +39,10 @@ expectType<Validator>(validator.addValidation(validation));
 expectType<Validator>(validator.addValidationFunction("validation", value => {}));
 validator.validate({}, {});
 validator.validate(new Date(), {getFullYear: "present"});
+
+const validatorError = new ValidatorError("Invalid", "property");
+
+expectAssignable<Error>(new ValidationError("Invalid"));
+expectAssignable<Error>(validatorError);
+expectAssignable<Error>(new ValidatorError("Also invalid", "property", validatorError));
+expectType<{[key: string]: Array<string>}>(validatorError.errors);
