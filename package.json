@@ -1,6 +1,6 @@
 {
     "name": "@moonwalkingbits/apollo-validation",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "Easy and extensive validation engine.",
     "author": "Martin Pettersson <martin@moonwalkingbits.com>",
     "license": "MIT",
