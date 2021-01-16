@@ -7,12 +7,18 @@
 
 export { default as BetweenValidation } from "./lib/BetweenValidation.js";
 export { default as EmptyValidation } from "./lib/EmptyValidation.js";
+export { default as GreaterThanOrEqualToValidation } from "./lib/GreaterThanOrEqualToValidation.js";
+export { default as GreaterThanValidation } from "./lib/GreaterThanValidation.js";
 export { default as InValidation } from "./lib/InValidation.js";
+export { default as IncludeValidation } from "./lib/IncludeValidation.js";
+export { default as LessThanOrEqualToValidation } from "./lib/LessThanOrEqualToValidation.js";
+export { default as LessThanValidation } from "./lib/LessThanValidation.js";
 export { default as MatchValidation } from "./lib/MatchValidation.js";
 export { default as MaxValidation } from "./lib/MaxValidation.js";
 export { default as MinValidation } from "./lib/MinValidation.js";
 export { default as NotEmptyValidation } from "./lib/NotEmptyValidation.js";
 export { default as NumericValidation } from "./lib/NumericValidation.js";
+export { default as TypeValidation } from "./lib/TypeValidation.js";
 export { default as ValidationError } from "./lib/ValidationError.js";
 export { default as ValidationStrategy } from "./lib/ValidationStrategy.js";
 export { default as Validator } from "./lib/Validator.js";

@@ -38,7 +38,12 @@ describe("ValidatorFactory", () => {
         it("should create validator with all available validations", () => {
             const validator = validatorFactory.createValidator();
 
-            validator.validate({}, {key: "between|empty|not_empty|in|match|max|min|numeric"});
+            validator.validate(
+                {},
+                {
+                    key: "between|empty|not_empty|gt|gte|lt|lte|in|include|match|max|min|numeric|type"
+                }
+            );
         });
     });
 });
