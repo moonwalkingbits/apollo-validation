@@ -34,6 +34,7 @@ describe("TypeValidation", () => {
             validation.validate(() => {}, "function");
             validation.validate(Date.now(), "date");
             validation.validate(new Date(), "date");
+            validation.validate(null, "null");
         });
 
         it("should throw error for non matching value types", () => {
@@ -43,6 +44,7 @@ describe("TypeValidation", () => {
             expect(() => validation.validate({}, "date")).to.throw(ValidationError);
             expect(() => validation.validate(Date.now(), "object")).to.throw(ValidationError);
             expect(() => validation.validate(new Date(), "object")).to.throw(ValidationError);
+            expect(() => validation.validate(null, "object")).to.throw(ValidationError);
         });
     });
 });
