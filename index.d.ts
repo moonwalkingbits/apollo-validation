@@ -93,9 +93,10 @@ declare class Validator {
      *
      * @param object Object to validate.
      * @param rules Rules to validate the object against.
+     * @param clearPreviousErrors Whether to clear any errors from previous invocations.
      * @throws When object is invalid.
      */
-    public validate(object: any, rules: {[key: string]: string}): void;
+    public validate(object: any, rules: {[key: string]: string}, clearPreviousErrors?: boolean): void;
 }
 
 /**

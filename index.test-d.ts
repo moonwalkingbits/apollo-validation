@@ -38,7 +38,7 @@ expectType<Validator>(validator.useValidationStrategy(ValidationStrategy.RUN_ALL
 expectType<Validator>(validator.addValidation(validation));
 expectType<Validator>(validator.addValidationFunction("validation", value => {}));
 validator.validate({}, {});
-validator.validate(new Date(), {getFullYear: "present"});
+validator.validate(new Date(), {getFullYear: "present"}, false);
 
 const validatorError = new ValidatorError("Invalid", "property");
 
