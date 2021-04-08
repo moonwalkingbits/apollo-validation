@@ -25,8 +25,10 @@ describe("MatchValidation", () => {
     });
 
     describe("#validate", () => {
-        it("should throw error if invalid value type", () => {
-            expect(() => validation.validate(0)).to.throw(Error);
+        it("should cast value to string", () => {
+            validation.validate(1, /1/);
+
+            expect(() => validation.validate(2, /1/)).to.throw(Error);
         });
 
         it("should throw error if invalid pattern type", () => {
